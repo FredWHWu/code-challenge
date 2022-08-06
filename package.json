@@ -14,7 +14,7 @@
   "scripts": {
     "heroku-prebuild": "yarn install && cd client && yarn install && cd ../server && yarn install",
     "build": "yarn workspaces foreach run build",
-    "start": "yarn workspaces server start"
+    "start": "yarn workspace server start"
   },
   "author": "Wu Wing Hang Fred <fred_ai100@outlook.com>",
   "packageManager": "yarn@3.2.2"
