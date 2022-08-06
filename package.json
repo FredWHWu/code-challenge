@@ -8,6 +8,9 @@
     "server",
     "client"
   ],
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "yarn workspaces foreach run build",
     "start": "yarn workspaces server start"
