@@ -12,6 +12,7 @@
     "node": "16.x"
   },
   "scripts": {
+    "postinstall": "yarn workspaces foreach run install",
     "build": "yarn workspaces foreach run build",
     "start": "yarn workspaces server start"
   },
