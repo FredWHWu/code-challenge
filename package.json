@@ -1,0 +1,17 @@
+{
+  "name": "code-challenge-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FredWHWu/code-challenge.git",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach run build",
+    "start": "yarn workspaces server start"
+  },
+  "author": "Wu Wing Hang Fred <fred_ai100@outlook.com>",
+  "packageManager": "yarn@3.2.2"
+}
