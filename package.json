@@ -12,12 +12,9 @@
     "node": "16.x"
   },
   "scripts": {
-    "heroku-prebuild": "yarn install && concurrently \"cd client && yarn install\" \"cd server && yarn install\"",
+    "heroku-prebuild": "cd client && yarn install && cd ../server && yarn install",
     "build": "yarn workspaces foreach run build",
     "start": "yarn workspaces server start"
-  },
-  "devDependencies": {
-    "concurrently": "^7.3.0"
   },
   "author": "Wu Wing Hang Fred <fred_ai100@outlook.com>",
   "packageManager": "yarn@3.2.2"
