@@ -1,4 +1,4 @@
-import { IssueBox, IssueSkeleton } from './components';
+import { AddIssueBox, IssueBox, IssueSkeleton } from './components';
 import { IssueModel } from './model/issue.model';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { useIssueData } from './hooks/useIssueData';
@@ -24,7 +24,10 @@ const App = () => {
         </h1>
       </header>
       <main className="width-full p-4">
-        <h2 className="mb-2">Past Issues</h2>
+        <h2 className="mb-2 h-10 pr-4">
+          Past Issues
+        <AddIssueBox className='float-right' onClick={()=>{console.log('add!!!')}}/>
+        </h2>
         <div className="flex flex-col md:grid md:gap-4 md:grid-cols-[repeat(auto-fill,_300px)]">
           {isLoading ? renderIssueLoading(5) : renderIssue(issueData)}
         </div>
