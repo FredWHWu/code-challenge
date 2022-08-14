@@ -1,6 +1,6 @@
 import { IssueModel } from "../model/issus.model";
 import _ from "lodash";
-const fs = require('fs/promises');
+const fs = require("fs/promises");
 
 const dataPath = "./data/issue.json";
 
@@ -39,6 +39,7 @@ const updateIssue = async (issue: IssueModel) => {
 };
 
 const deleteIssue = async (id: string) => {
+  console.log(id);
   const issues = await readAllIssue();
   const matchIssueIndex = _.findIndex(issues, { id });
   if (matchIssueIndex >= 0) {
@@ -59,4 +60,4 @@ const writeIssues = async (issues: IssueModel[]) => {
   }
 };
 
-export {createIssue, updateIssue, readAllIssue, deleteIssue}
+export { createIssue, updateIssue, readAllIssue, deleteIssue };
